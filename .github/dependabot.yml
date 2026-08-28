@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      gradle-minor-and-patch:
+        update-types:
+          - minor
+          - patch
+      gradle-major:
+        update-types:
+          - major
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      github-actions-minor-and-patch:
+        update-types:
+          - minor
+          - patch
+      github-actions-major:
+        update-types:
+          - major
