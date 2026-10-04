@@ -1,16 +1,16 @@
 version: 2
 updates:
-  - package-ecosystem: gradle
+  - package-ecosystem: maven
     directory: /
     schedule:
       interval: weekly
       day: monday
     groups:
-      gradle-minor-and-patch:
+      maven-minor-and-patch:
         update-types:
           - minor
           - patch
-      gradle-major:
+      maven-major:
         update-types:
           - major
   - package-ecosystem: github-actions
