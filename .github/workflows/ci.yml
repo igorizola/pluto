@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Maven source project
         working-directory: mvnsrc
-        run: mvn --batch-mode install
+        run: ./mvnw --batch-mode install
 
       - name: Invoke project coordinates plugin
         run: ./mvnw --batch-mode no.demo.maven:project-coordinates-maven-plugin:0.0.1-SNAPSHOT:list-coordinates
