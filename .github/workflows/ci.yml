@@ -31,6 +31,9 @@ jobs:
       - name: Invoke project coordinates plugin
         run: ./mvnw --batch-mode no.demo.maven:project-coordinates-maven-plugin:0.0.1-SNAPSHOT:list-coordinates
 
+      - name: Invoke hello world plugin goal
+        run: ./mvnw --batch-mode no.demo.maven:project-coordinates-maven-plugin:0.0.1-SNAPSHOT:hello-world
+
       - name: Build Docker image
         run: |
           # tag with short SHA so images from CI are unique
